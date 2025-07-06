@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Solver Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="School Logo">
+
+        <!-- Title -->
+        <h1>📘 School Math Solver with AI Tools</h1>
+
+        <!-- Upload Form -->
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required><br>
+            <input type="submit" value="Upload and Solve">
+        </form>
+
+        <!-- Solution Display -->
+        {% if solution %}
+        <h2>Solution:</h2>
+        <pre>{{ solution }}</pre>
+        {% endif %}
+    </div>
+</body>
+</html>
