@@ -2,28 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math Solver Web App</title>
+    <title>Math Solver</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <!-- Logo -->
-        <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="School Logo">
+        <h1>📚 Smart Math Solver</h1>
+        <p class="subtitle">Solve math problems from images or text using AI</p>
 
-        <!-- Title -->
-        <h1>📘 School Math Solver with AI Tools</h1>
+        <!-- Section 1 -->
+        <section>
+            <h2>🖼️ Section 1: Solve from Image (Math Expression)</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="image1" accept="image/*" required>
+                <button type="submit">📷 Solve</button>
+            </form>
+            {% if result1 %}
+                <div class="output">Answer: {{ result1 }}</div>
+            {% endif %}
+        </section>
 
-        <!-- Upload Form -->
-        <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="image" required><br>
-            <input type="submit" value="Upload and Solve">
-        </form>
+        <!-- Section 2 -->
+        <section>
+            <h2>🧠 Section 2: Solve Word Problem (Image or Text)</h2>
 
-        <!-- Solution Display -->
-        {% if solution %}
-        <h2>Solution:</h2>
-        <pre>{{ solution }}</pre>
-        {% endif %}
+            <!-- Image Upload -->
+            <form method="POST" enctype="multipart/form-data">
+                <label>Upload Image:</label>
+                <input type="file" name="image2" accept="image/*">
+                <button type="submit">📷 Analyze Image</button>
+            </form>
+
+            <!-- Text Input -->
+            <form method="POST">
+                <label>Or Type the Question:</label>
+                <textarea name="text2" rows="3" placeholder="e.g. Sarah has 3 apples..."></textarea>
+                <button type="submit">✍️ Analyze Text</button>
+            </form>
+
+            {% if result2 %}
+                <div class="output">Answer: {{ result2 }}</div>
+            {% endif %}
+        </section>
     </div>
 </body>
 </html>
