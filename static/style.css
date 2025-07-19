@@ -1,68 +1,88 @@
-/* static/style.css */
-
 body {
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://i.imgur.com/BV8G1mP.jpg'); /* chalkboard style background */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    min-height: 100vh;
+    background-color: #f0f4f8;
+    padding: 40px;
+    color: #2c3e50;
 }
 
 .container {
-    max-width: 800px;
-    margin: 60px auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    text-align: center;
-}
-
-.logo {
-    width: 100px;
-    margin-bottom: 20px;
-    border-radius: 50%;
+    max-width: 720px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #ffd700;
+    text-align: center;
+    color: #006699;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
-form {
-    margin-top: 20px;
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
 }
 
-input[type="file"] {
-    margin: 10px 0;
-    padding: 10px;
+section {
+    margin-bottom: 50px;
 }
 
-input[type="submit"] {
-    background-color: #ffd700;
-    color: black;
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #444;
+    border-left: 4px solid #007acc;
+    padding-left: 10px;
+}
+
+label {
     font-weight: bold;
-    padding: 10px 25px;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
+    font-size: 14px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #facc15;
+button:hover {
+    background-color: #005c99;
 }
 
-pre {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    padding: 20px;
-    border-left: 5px solid #ffd700;
+.output {
+    background-color: #eaffea;
+    border-left: 5px solid #34a853;
+    padding: 15px;
+    margin-top: 20px;
     border-radius: 8px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    margin-top: 30px;
+    font-weight: bold;
+    color: #2e7d32;
 }
