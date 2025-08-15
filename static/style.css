@@ -1,88 +1,58 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    padding: 40px;
-    color: #2c3e50;
-}
-
-.container {
-    max-width: 720px;
-    margin: auto;
-    background-color: #ffffff;
-    padding: 30px 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #006699;
-    font-size: 28px;
-    margin-bottom: 10px;
+    color: #2d6cdf;
+    margin-bottom: 20px;
 }
 
-.subtitle {
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #444;
-    border-left: 4px solid #007acc;
-    padding-left: 10px;
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 label {
     font-weight: bold;
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #333;
 }
 
-input[type="file"],
-textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 12px;
-    border-radius: 10px;
+input[type="file"], input[type="text"] {
+    margin: 10px 0;
+    padding: 8px;
+    width: 250px;
     border: 1px solid #ccc;
-    background-color: #fafafa;
-    font-size: 14px;
-}
-
-textarea {
-    resize: vertical;
+    border-radius: 4px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007acc;
+    background-color: #2d6cdf;
     color: white;
+    padding: 10px 15px;
     border: none;
-    border-radius: 10px;
-    font-size: 14px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #005c99;
+    background-color: #1c4da1;
 }
 
-.output {
-    background-color: #eaffea;
-    border-left: 5px solid #34a853;
-    padding: 15px;
+h3 {
     margin-top: 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #2e7d32;
+    color: #444;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
 }
