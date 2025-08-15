@@ -1,49 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Math Solver</title>
+    <title>AI Math Web App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>📚 Smart Math Solver</h1>
-        <p class="subtitle">Solve math problems from images or text using AI</p>
+    <h1>Primary Math Web App</h1>
 
-        <!-- Section 1 -->
-        <section>
-            <h2>🖼️ Section 1: Solve from Image (Math Expression)</h2>
-            <form method="POST" enctype="multipart/form-data">
-                <input type="file" name="image1" accept="image/*" required>
-                <button type="submit">📷 Solve</button>
-            </form>
-            {% if result1 %}
-                <div class="output">Answer: {{ result1 }}</div>
-            {% endif %}
-        </section>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload Math Question Image:</label>
+        <input type="file" name="image"><br><br>
 
-        <!-- Section 2 -->
-        <section>
-            <h2>🧠 Section 2: Solve Word Problem (Image or Text)</h2>
+        <label>Or Type a Question:</label><br>
+        <input type="text" name="text" size="50"><br><br>
 
-            <!-- Image Upload -->
-            <form method="POST" enctype="multipart/form-data">
-                <label>Upload Image:</label>
-                <input type="file" name="image2" accept="image/*">
-                <button type="submit">📷 Analyze Image</button>
-            </form>
+        <button type="submit">Submit</button>
+    </form>
 
-            <!-- Text Input -->
-            <form method="POST">
-                <label>Or Type the Question:</label>
-                <textarea name="text2" rows="3" placeholder="e.g. Sarah has 3 apples..."></textarea>
-                <button type="submit">✍️ Analyze Text</button>
-            </form>
-
-            {% if result2 %}
-                <div class="output">Answer: {{ result2 }}</div>
-            {% endif %}
-        </section>
-    </div>
+    {% if question %}
+        <h3>Question:</h3>
+        <p>{{ question }}</p>
+        <h3>Result:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
 </body>
 </html>
